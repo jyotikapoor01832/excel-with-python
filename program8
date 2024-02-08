@@ -1,0 +1,10 @@
+from openpyxl.styles import Font
+from openpyxl.styles.colors import Color
+from openpyxl import Workbook
+
+wb=Workbook()
+ws=wb.active
+ws['A1'].font=Font(color= 'FF0000')
+ws['A1']="Hello"
+
+wb.save('style.xlsx')
