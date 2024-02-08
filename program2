@@ -1,0 +1,6 @@
+from openpyxl import load_workbook
+
+wb= load_workbook('sample.xlsx')
+sheet_rangers=wb['hello world']
+print(sheet_rangers['A1'].value)
+print(sheet_rangers['c3'].value)
