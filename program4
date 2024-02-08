@@ -1,0 +1,15 @@
+from openpyxl import Workbook
+from openpyxl.drawing.image import Image
+
+wb=Workbook()
+ws=wb.active
+
+img = Image('cat.jpg')
+ws.add_image(img,'G4')
+
+img2=Image('cat.jpg')
+img2.anchor='A1'
+ws.add_image(img2,'A1')
+ws["E1"]="Hello cat"
+
+wb.save('cat.xlsx')
